@@ -60,7 +60,7 @@ public class SSLContextUtil {
      */
     public static SSLContext createSSLContext(TrustManager trustManager) {
     	SSLContext context = null;
-    	String overrideProtocol = System.getProperty("com.ibm.team.repository.transport.client.protocol"); //$NON-NLS-1$
+    	String overrideProtocol = "TSLv1.2";
 	    if (overrideProtocol != null)  {
 	    	LogUtils.logInfo("Attempting to create protocol context using system property: " + overrideProtocol);  //$NON-NLS-1$
 	        context = createSSLContext(overrideProtocol, trustManager);
